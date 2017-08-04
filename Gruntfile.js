@@ -8,7 +8,7 @@ module.exports = grunt => {
                 root: 'src',
                 stylesheets: '<%= paths.source.root %>/stylesheets',
                 javascripts: '<%= paths.source.root %>/app',
-                node_modules: '<%= paths.source.root %>/node_modules',
+                node_modules: 'node_modules',
             },
             public: {
                 root: 'public',
