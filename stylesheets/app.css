@@ -14606,6 +14606,14 @@ body {
 .kt--project .kt--project-box > h4 {
   font-size: 130%;
 }
+.kt--project .kt--project-box > a {
+  padding: 0 7px;
+}
+@media (min-width: 640px) {
+  .kt--project .kt--project-box > a {
+    padding: 0;
+  }
+}
 .kt--project .kt--project-box > a:hover {
   text-decoration: none;
 }
