@@ -1,0 +1,9 @@
+[
+    {
+        "title":"Technology Radar",
+        "description":"Technology Radar is a tool that helps organizations to monitor their own discoveries. Keep track of your technologies according to your previous successes and failures. This project is freely based on technology-radar by ThoughtWorks.",
+        "image": "images/projects/technology-radar.png",
+        "linkWebsite":"https://kata-team.github.io/technology-radar/",
+        "linkGithub":"https://github.com/kata-team/technology-radar"
+    }
+]

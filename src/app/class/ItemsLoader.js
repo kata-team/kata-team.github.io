@@ -1,7 +1,6 @@
 import _ from 'underscore';
 import rest from 'rest';
 import mime from 'rest/interceptor/mime';
-import Item from '../class/Item';
 
 const client = rest.wrap(mime);
 
@@ -11,14 +10,14 @@ export default class ItemsLoader {
         this.items = [];
     }
 
-    load(endpoint, callback) {
+    load(endpoint, Obj, callback) {
         if (_.isEmpty(this.items)) {
             switch (endpoint.type) {
             case 'SPREADSHEETS':
-                this.googleSpreadsheets(endpoint.url, callback);
+                this.googleSpreadsheets(endpoint.url, Obj, callback);
                 break;
             case 'JSON':
-                this.json(endpoint.url, callback);
+                this.json(endpoint.url, Obj, callback);
                 break;
             default:
                 break;
@@ -28,16 +27,16 @@ export default class ItemsLoader {
         }
     }
 
-    json(url, callback) {
+    json(url, Obj, callback) {
         client(url).then((response) => {
             _.map(response.entity, (item) => {
-                this.items.push(new Item(item));
+                this.items.push(new Obj(item));
             });
             callback(this.items);
         });
     }
 
-    googleSpreadsheets(url, callback) {
+    googleSpreadsheets(url, Obj, callback) {
         const script = document.createElement('script');
         script.id = 'spreadsheets';
         script.src = url.replace('{1}', script.id);
@@ -55,7 +54,7 @@ export default class ItemsLoader {
                         }
                     });
 
-                    return new Item(item);
+                    return new Obj(item);
                 };
 
                 _.map(jsonData.feed.entry, (entry) => {

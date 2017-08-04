@@ -1,8 +1,195 @@
 body {
+    background-color: #f8f8f8;
     font-weight: 300;
-    margin: 140px 0 0;
+    cursor: default;
+    .kt--pattern();
+}
+
+.kt--pattern {
+    background-image: url("@{image-folder--patterns}/cubes.png");
+}
+
+.uk-section {
+    &.uk-section-small {
+        padding: 35px 0;
+    }
+    &.uk-section-over {
+        @background-color: white;
+        @border-color: darken(@background-color,10%);
+        @shadow-color: darken(@background-color,8%);
+
+        background-color: @background-color;
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        box-shadow: 0 0px 6px 1px @shadow-color;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.kt--logo {
+    &:hover {
+        text-decoration: none;
+    }
+    h1 {
+        display: inline-block;
+        font-size: 45px;
+        vertical-align: middle;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        width: 74px;
+        position: relative;
+        top: -12px;
+    }
+}
+
+.kt--team {
+    margin-top: -70px;
+    .kt--person {
+        display: inline-block;
+
+        @media (min-width: 640px) {
+            width: 50%;
+        }
+    }
+}
+
+.kt--person {
+    position: relative;
+
+    .kt--person__figure {
+
+        .transition(transform 1s);
+        .transform-style(preserve-3d);
+        .backface-visibility(hidden);
+
+        background-color: white;
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+
+        box-shadow: 0 5px 15px fadeout(black, 80%);
+        border-radius: 20% 40%;
+
+        .transform(rotateY( 0deg ));
+        &:last-child {
+            .transform(rotateY( 180deg ));
+            border-radius: 40% 20%;
+            > div {
+                position: relative;
+                top: 50%;
+                margin-top: 104px / 2 * -1;
+                @media (min-width: 1024px) {
+                    margin-top: 73px / 2 * -1;
+                }
+            }
+            h3 {
+                margin: 0;
+                > span {
+                    display: block;
+                    @media (min-width: 1024px) {
+                        display: inline;
+                    }
+                }
+            }
+            p a {
+                margin: 0 5px;
+            }
+        }
+    }
+
+    img.kt--person__figure {
+        position: relative;
+    }
+
+    &:hover {
+        .kt--person__figure {
+            .transform(rotateY( 180deg ));
+            &:last-child {
+                .transform(rotateY( 0deg ));
+            }
+        }
+    }
+}
+
+.kt--project {
+    font-size: 0;
+    margin: 70px 0;
+    &:first-child {
+        margin-top: 30px;
+    }
+    .kt--project-box {
+        display: inline-block;
+        vertical-align: middle;
+        > h4 {
+            font-size: 130%;
+        }
+        > a {
+            &:hover {
+                text-decoration: none;
+            }
+            i {
+                vertical-align: middle;
+                margin-right: 1px;
+            }
+        }
+        > p {
+            margin-top: 4px;
+        }
+        font-size: 16px;
+        text-align: center;
+        @media (min-width: 640px) {
+            width: 50%;
+            font-size: 13px;
+        }
+        @media (min-width: 768px) {
+            font-size: 15px;
+        }
+        @media (min-width: 1024px) {
+            font-size: 16px;
+        }
+        @media (min-width: 1280px) {
+            font-size: 18px;
+        }
+    }
+
     @media (min-width: 640px) {
-        margin-top: 70px;
+        &:nth-child(2n+1) {
+            .kt--project-box__1 {
+                > * {
+                    padding-right: 15px;
+                }
+
+                text-align: left;
+            }
+            .kt--project-box__2 {
+                > * {
+                    padding-left: 15px;
+                }
+            }
+        }
+        &:nth-child(2n) {
+            .kt--project-box__1 {
+                > * {
+                    padding-left: 15px;
+                }
+
+                text-align: right;
+                margin-left: 50%;
+            }
+            .kt--project-box__2 {
+                > * {
+                    padding-right: 15px;
+                }
+
+                margin-left: -100%;
+            }
+        }
     }
 }
 

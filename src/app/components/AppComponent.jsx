@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import NavbarComponent from './NavbarComponent';
-import ResultComponent from './ResultComponent';
-import SearchActions from '../actions/SearchActions';
+import ProjectsComponent from './ProjectsComponent';
+import LoaderActions from '../actions/LoaderActions';
 
 export default class AppComponent extends Component {
 
     componentDidMount() {
-        SearchActions.changeCriteria('');
+        LoaderActions.load();
     }
 
     render() {
         return (
             <div className="app">
-                <NavbarComponent />
-                <ResultComponent />
+                <ProjectsComponent />
             </div>
         );
     }

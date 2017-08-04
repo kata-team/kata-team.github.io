@@ -1,0 +1,27 @@
+.transition( @value ) {
+    -webkit-transition: ~"-webkit-@{value}";
+       -moz-transition: ~"-moz-@{value}";
+         -o-transition: ~"-o-@{value}";
+            transition: @value;
+}
+
+.backface-visibility( @value ) {
+    -webkit-backface-visibility: @value;
+       -moz-backface-visibility: @value;
+         -o-backface-visibility: @value;
+            backface-visibility: @value;
+}
+
+.transform( @value ) {
+    -webkit-transform: @value;
+       -moz-transform: @value;
+         -o-transform: @value;
+            transform: @value;
+}
+
+.transform-style( @value ) {
+    -webkit-transform-style: @value;
+       -moz-transform-style: @value;
+         -o-transform-style: @value;
+            transform-style: @value;
+}

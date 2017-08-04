@@ -14,7 +14,7 @@ module.exports = {
     },
     travis: {
         options: {
-            repo: `https://${process.env.GH_TOKEN}@github.com/kata-team/technology-radar.git`,
+            repo: `https://${process.env.GH_TOKEN}@github.com/kata-team/kata-team.github.io.git`,
             message: 'Deploy to GitHub Pages from Travis CI.',
         },
         src: ['**'],
