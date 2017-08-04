@@ -2,7 +2,7 @@ module.exports = {
     options: {
         base: 'public',
         dotfiles: true,
-        branch: 'gh-pages',
+        branch: 'master',
         user: {
             name: 'Marco Montalbano',
             email: 'marcomontalbano.work@gmail.com',
