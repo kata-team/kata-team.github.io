@@ -7,7 +7,7 @@ export default class ProjectsComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { projects: ProjectsStore.projects() };
+        this.state = { projects: ProjectsStore.items() };
     }
 
     componentDidMount() {
@@ -19,7 +19,7 @@ export default class ProjectsComponent extends Component {
     }
 
     onLoadHandler() {
-        this.setState({ projects: ProjectsStore.projects() });
+        this.setState({ projects: ProjectsStore.items() });
     }
 
     renderItems(items) {

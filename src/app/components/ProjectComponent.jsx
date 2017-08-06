@@ -11,15 +11,15 @@ export default class ProjectComponent extends Component {
     }
 
     get linkWebsite() {
-        return this.props.item.linkWebsite ?
-            <a className="kt--project-link" target="_blank" rel="noopener noreferrer" href={this.props.item.linkWebsite}>
+        return this.props.item.linkwebsite ?
+            <a className="kt--project-link" target="_blank" rel="noopener noreferrer" href={this.props.item.linkwebsite}>
                 <i className="fa fa-globe" aria-hidden="true"></i> <small>website</small>
             </a> : '';
     }
 
     get linkGithub() {
-        return this.props.item.linkGithub ?
-            <a className="kt--project-link" target="_blank" rel="noopener noreferrer" href={this.props.item.linkGithub}>
+        return this.props.item.linkgithub ?
+            <a className="kt--project-link" target="_blank" rel="noopener noreferrer" href={this.props.item.linkgithub}>
                 <i className="fa fa-github" aria-hidden="true"></i> <small>github</small>
             </a> : '';
     }

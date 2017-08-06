@@ -1,9 +1,9 @@
 export default class Project {
-    constructor({ title = '', image = '', description = '', linkWebsite = '', linkGithub = '' }) {
+    constructor({ title = '', image = '', description = '', linkwebsite = '', linkgithub = '' }) {
         this.title = title;
         this.image = image;
         this.description = description;
-        this.linkWebsite = linkWebsite;
-        this.linkGithub = linkGithub;
+        this.linkwebsite = linkwebsite;
+        this.linkgithub = linkgithub;
     }
 }

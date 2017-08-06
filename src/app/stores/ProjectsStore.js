@@ -10,24 +10,22 @@ const EVENTS = {
     LOAD: 'LOAD',
 };
 
-// const WORKSHEET_ID = '112MlfyXSlIQ8nae85Te_xWDBP136GRaYeHlDdKgYyPo';
+const WORKSHEET_ID = '1rzoqR05segkYtSVNfc-F_3TyKW4RfaLXX58Fm-q9DGs';
 
 const state = {
     endpoint: {
-        // type: 'SPREADSHEETS',
-        // url: `https://spreadsheets.google.com/feeds/list/${WORKSHEET_ID}/1/public/values?alt=json-in-script&callback={1}`,
-        type: 'JSON',
-        url: 'projects.json',
+        type: 'SPREADSHEETS',
+        url: `https://spreadsheets.google.com/feeds/list/${WORKSHEET_ID}/2/public/values?alt=json-in-script&callback={1}`,
     },
 };
 
 const results = {
-    projects: [],
+    items: [],
 };
 
 const ItemsStore = Object.assign({}, EventEmitter.prototype, {
-    projects() {
-        return results.projects;
+    items() {
+        return results.items;
     },
     emitLoad() {
         this.emit(EVENTS.LOAD);
@@ -43,8 +41,8 @@ const ItemsStore = Object.assign({}, EventEmitter.prototype, {
 AppDispatcher.register((action) => {
     switch (action.actionType) {
     case LoaderConstants.LOAD:
-        itemsLoader.load(state.endpoint, Project, (projects) => {
-            results.projects = projects;
+        itemsLoader.load(state.endpoint, Project, (items) => {
+            results.items = items;
             ItemsStore.emitLoad();
         });
         break;
