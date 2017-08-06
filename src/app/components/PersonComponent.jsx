@@ -13,21 +13,21 @@ export default class PersonComponent extends Component {
     get linkWebsite() {
         return this.props.item.linkwebsite ?
             <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkwebsite}>
-                <i className="fa fa-globe" aria-hidden="true"></i> <small>website</small>
+                <i className="fa fa-globe fa-lg" aria-hidden="true"></i>
             </a> : '';
     }
 
     get linkGithub() {
         return this.props.item.linkgithub ?
             <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkgithub}>
-                <i className="fa fa-github" aria-hidden="true"></i> <small>github</small>
+                <i className="fa fa-github fa-lg" aria-hidden="true"></i>
             </a> : '';
     }
 
-    get linkLinkeid() {
-        return this.props.item.linklinkeid ?
-            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linklinkeid}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i> <small>github</small>
+    get linkLinkedin() {
+        return this.props.item.linklinkedin ?
+            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linklinkedin}>
+                <i className="fa fa-linkedin fa-lg" aria-hidden="true"></i>
             </a> : '';
     }
 
