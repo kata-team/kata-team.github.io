@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'underscore';
+import SpinnerComponent from './SpinnerComponent';
 import ProjectComponent from './ProjectComponent';
 import ProjectsStore from '../stores/ProjectsStore';
 
@@ -23,9 +24,9 @@ export default class ProjectsComponent extends Component {
     }
 
     renderItems(items) {
-        return _.map(items, (item, key) => (
+        return items.length > 0 ? _.map(items, (item, key) => (
             <ProjectComponent key={key} item={item} />
-        ));
+        )) : <SpinnerComponent />;
     }
 
     render() {

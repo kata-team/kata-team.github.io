@@ -37,8 +37,11 @@ export default class ItemsLoader {
     }
 
     googleSpreadsheets(url, Obj, callback) {
+        const random = () => {
+            return Math.round(Math.random() * 100);
+        };
         const script = document.createElement('script');
-        script.id = 'spreadsheets';
+        script.id = `spreadsheets_${random()}_${random()}_${random()}`;
         script.src = url.replace('{1}', script.id);
 
         if (document.getElementById(script.id) === null) {
