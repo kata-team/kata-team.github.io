@@ -14469,6 +14469,12 @@ td.uk-text-break {
   overflow: visible;
   clip: auto;
 }
+.uk-spinner {
+  display: block;
+  margin: 15px 0 !important;
+  text-align: center;
+  width: 100%;
+}
 body {
   background-color: #f8f8f8;
   font-weight: 300;
@@ -14488,6 +14494,10 @@ body {
   box-shadow: 0 0px 6px 1px #ebebeb;
   position: relative;
   z-index: 1;
+}
+.kt--tagline {
+  text-align: center;
+  font-size: 26px;
 }
 .kt--logo:hover {
   text-decoration: none;
@@ -14701,12 +14711,12 @@ footer .footer-links a.badge:first-child {
     float: right;
   }
 }
-.app--result {
-  min-height: calc(100vh - 140px - 90px);
+#root {
+  min-height: calc(100vh - 146px - 190px);
 }
 @media (min-width: 640px) {
-  .app--result {
-    min-height: calc(100vh - 70px - 90px);
+  #root {
+    min-height: calc(100vh - 146px - 160px);
   }
 }
 /*# sourceMappingURL=app.css.map */
