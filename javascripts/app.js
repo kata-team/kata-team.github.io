@@ -27166,13 +27166,7 @@
 	            return this.props.item.linkwebsite ? _react2.default.createElement(
 	                'a',
 	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkwebsite },
-	                _react2.default.createElement('i', { className: 'fa fa-globe', 'aria-hidden': 'true' }),
-	                ' ',
-	                _react2.default.createElement(
-	                    'small',
-	                    null,
-	                    'website'
-	                )
+	                _react2.default.createElement('i', { className: 'fa fa-globe fa-lg', 'aria-hidden': 'true' })
 	            ) : '';
 	        }
 	    }, {
@@ -27181,28 +27175,16 @@
 	            return this.props.item.linkgithub ? _react2.default.createElement(
 	                'a',
 	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkgithub },
-	                _react2.default.createElement('i', { className: 'fa fa-github', 'aria-hidden': 'true' }),
-	                ' ',
-	                _react2.default.createElement(
-	                    'small',
-	                    null,
-	                    'github'
-	                )
+	                _react2.default.createElement('i', { className: 'fa fa-github fa-lg', 'aria-hidden': 'true' })
 	            ) : '';
 	        }
 	    }, {
-	        key: 'linkLinkeid',
+	        key: 'linkLinkedin',
 	        get: function get() {
-	            return this.props.item.linklinkeid ? _react2.default.createElement(
+	            return this.props.item.linklinkedin ? _react2.default.createElement(
 	                'a',
-	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linklinkeid },
-	                _react2.default.createElement('i', { className: 'fa fa-linkedin', 'aria-hidden': 'true' }),
-	                ' ',
-	                _react2.default.createElement(
-	                    'small',
-	                    null,
-	                    'github'
-	                )
+	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linklinkedin },
+	                _react2.default.createElement('i', { className: 'fa fa-linkedin fa-lg', 'aria-hidden': 'true' })
 	            ) : '';
 	        }
 	    }], [{
