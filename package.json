@@ -1,6 +1,6 @@
 {
     "name": "kata-team",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "just another website",
     "main": "app.js",
     "author": "Kata Team",
@@ -13,6 +13,10 @@
         {
             "name": "Stefano Sala",
             "email": "salaste83@gmail.com"
+        },
+        {
+            "name": "Matteo Colombo Speroni",
+            "email": "matteo.colombosperoni@gmail.com"
         }
     ],
     "license": "MIT",
@@ -38,38 +42,38 @@
         "node": "6.9.4"
     },
     "dependencies": {
-        "react": "^15.4.0",
-        "react-dom": "^15.4.0",
-        "flux": "^3.1.0",
-        "underscore": "*",
-        "rest": "^2.0.0",
         "es5-shim": "^4.5.9",
-        "uikit": "^3.0.0-beta",
-        "font-awesome": "^4.7.0"
+        "flux": "^3.1.0",
+        "font-awesome": "^4.7.0",
+        "react": "^15.6.2",
+        "react-dom": "^15.6.2",
+        "rest": "^2.0.0",
+        "uikit": "^3.0.0-beta.30",
+        "underscore": "*"
     },
     "devDependencies": {
-        "http-server": "^0.9.0",
-        "grunt": "^1.0.1",
-        "load-grunt-config": "^0.19.2",
-        "time-grunt": "^1.4.0",
-        "grunt-contrib-watch": "^1.0.0",
-        "grunt-contrib-less": "^1.4.0",
-        "grunt-contrib-cssmin": "^1.0.2",
-        "grunt-eslint": "^19.0.0",
+        "babel-core": "^6.26.0",
         "babel-eslint": "^7.1.1",
-        "eslint-plugin-jsx-a11y": "^2.2.3",
-        "eslint-plugin-react": "^6.6.0",
+        "babel-loader": "^6.2.8",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-react": "^6.16.0",
         "eslint-config-airbnb": "^13.0.0",
         "eslint-plugin-import": "^2.2.0",
-        "grunt-gh-pages": "^2.0.0",
+        "eslint-plugin-jsx-a11y": "^2.2.3",
+        "eslint-plugin-react": "^6.6.0",
+        "grunt": "^1.0.1",
         "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-cssmin": "^1.0.2",
+        "grunt-contrib-less": "^1.4.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-eslint": "^19.0.0",
+        "grunt-gh-pages": "^2.0.0",
         "grunt-string-replace": "^1.3.1",
-        "webpack": "^1.14.0",
-        "webpack-dev-server": "^1.16.2",
         "grunt-webpack": "^1.0.18",
-        "babel-loader": "^6.2.8",
-        "babel-core": "^6.18.2",
-        "babel-preset-es2015": "^6.18.0",
-        "babel-preset-react": "^6.16.0"
+        "http-server": "^0.9.0",
+        "load-grunt-config": "^0.19.2",
+        "time-grunt": "^1.4.0",
+        "webpack": "^1.14.0",
+        "webpack-dev-server": "^1.16.2"
     }
 }

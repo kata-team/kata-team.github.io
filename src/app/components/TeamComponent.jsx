@@ -4,6 +4,8 @@ import SpinnerComponent from './SpinnerComponent';
 import PersonComponent from './PersonComponent';
 import TeamStore from '../stores/TeamStore';
 
+import Person from '../class/Person';
+
 export default class TeamComponent extends Component {
 
     constructor(props) {
@@ -34,7 +36,7 @@ export default class TeamComponent extends Component {
             <div className="app--team">
                 <section className="uk-section">
                     <div className="uk-container">
-                        <div className="uk-child-width-1-2 uk-grid uk-text-center kt--team">
+                        <div className="uk-child-width-1-3 uk-grid uk-text-center kt--team">
                             { this.renderItems(this.state.team) }
                         </div>
                     </div>
