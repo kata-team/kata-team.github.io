@@ -36,6 +36,7 @@
         "test": "grunt test",
         "start": "http-server",
         "build": "grunt test build",
+        "watch": "grunt",
         "deploy": "grunt test build gh-pages:local"
     },
     "engines": {

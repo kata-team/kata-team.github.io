@@ -17,6 +17,11 @@ export default class PersonComponent extends Component {
             </a> : '';
     }
 
+    get personId() {
+        let id = `${this.props.item.firstname} ${this.props.item.lastname}`;
+        return id.replace(/\s/g, '-').toLowerCase();
+    }
+
     get linkGithub() {
         return this.props.item.linkgithub ?
             <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkgithub}>
@@ -34,7 +39,7 @@ export default class PersonComponent extends Component {
     render() {
         return (
             <div>
-                <div className="kt--person">
+                <div className="kt--person" data-person={this.personId}>
                     <img src={this.props.item.picture} alt="" className="kt--person__figure" />
                     <div className="kt--person__figure kt--pattern">
                         <div>
