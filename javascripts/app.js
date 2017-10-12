@@ -26812,7 +26812,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'kt--person' },
+	                    { className: 'kt--person', 'data-person': this.personId },
 	                    _react2.default.createElement('img', { src: this.props.item.picture, alt: '', className: 'kt--person__figure' }),
 	                    _react2.default.createElement(
 	                        'div',
@@ -26855,6 +26855,12 @@
 	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkwebsite },
 	                _react2.default.createElement('i', { className: 'fa fa-globe fa-lg', 'aria-hidden': 'true' })
 	            ) : '';
+	        }
+	    }, {
+	        key: 'personId',
+	        get: function get() {
+	            var id = this.props.item.firstname + ' ' + this.props.item.lastname;
+	            return id.replace(/\s/g, '-').toLowerCase();
 	        }
 	    }, {
 	        key: 'linkGithub',
