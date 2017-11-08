@@ -12,14 +12,14 @@ export default class ProjectComponent extends Component {
 
     get linkWebsite() {
         return this.props.item.linkwebsite ?
-            <a className="kt--project-link" target="_blank" rel="noopener noreferrer" href={this.props.item.linkwebsite}>
+            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkwebsite}>
                 <i className="fa fa-globe" aria-hidden="true"></i> <small>website</small>
             </a> : '';
     }
 
     get linkGithub() {
         return this.props.item.linkgithub ?
-            <a className="kt--project-link" target="_blank" rel="noopener noreferrer" href={this.props.item.linkgithub}>
+            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkgithub}>
                 <i className="fa fa-github" aria-hidden="true"></i> <small>github</small>
             </a> : '';
     }
@@ -29,8 +29,10 @@ export default class ProjectComponent extends Component {
             <div className="kt--project">
                 <div className="kt--project-box kt--project-box__1">
                     <h4>{this.props.item.title}</h4>
-                    {this.linkWebsite}
-                    {this.linkGithub}
+                    <div className="kt--project-links">
+                        {this.linkWebsite}
+                        {this.linkGithub}
+                    </div>
                     <p>{this.props.item.description}</p>
                 </div>
                 <div className="kt--project-box kt--project-box__2">
