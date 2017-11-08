@@ -23667,8 +23667,12 @@
 	                        null,
 	                        this.props.item.title
 	                    ),
-	                    this.linkWebsite,
-	                    this.linkGithub,
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'kt--project-links' },
+	                        this.linkWebsite,
+	                        this.linkGithub
+	                    ),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
@@ -23687,7 +23691,7 @@
 	        get: function get() {
 	            return this.props.item.linkwebsite ? _react2.default.createElement(
 	                'a',
-	                { className: 'kt--project-link', target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkwebsite },
+	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkwebsite },
 	                _react2.default.createElement('i', { className: 'fa fa-globe', 'aria-hidden': 'true' }),
 	                ' ',
 	                _react2.default.createElement(
@@ -23702,7 +23706,7 @@
 	        get: function get() {
 	            return this.props.item.linkgithub ? _react2.default.createElement(
 	                'a',
-	                { className: 'kt--project-link', target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkgithub },
+	                { target: '_blank', rel: 'noopener noreferrer', href: this.props.item.linkgithub },
 	                _react2.default.createElement('i', { className: 'fa fa-github', 'aria-hidden': 'true' }),
 	                ' ',
 	                _react2.default.createElement(
