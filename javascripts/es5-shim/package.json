@@ -1,31 +1,49 @@
 {
   "_args": [
     [
-      "es5-shim@4.5.9",
+      {
+        "raw": "es5-shim@^4.5.9",
+        "scope": null,
+        "escapedName": "es5-shim",
+        "name": "es5-shim",
+        "rawSpec": "^4.5.9",
+        "spec": ">=4.5.9 <5.0.0",
+        "type": "range"
+      },
       "/home/travis/build/kata-team/kata-team.github.io"
     ]
   ],
-  "_from": "es5-shim@4.5.9",
+  "_from": "es5-shim@>=4.5.9 <5.0.0",
   "_id": "es5-shim@4.5.9",
-  "_inBundle": false,
-  "_integrity": "sha1-Kh4rnlg/9f7Qwgo+4svz91IwpcA=",
+  "_inCache": true,
   "_location": "/es5-shim",
+  "_nodeVersion": "6.2.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/es5-shim-4.5.9.tgz_1465840965445_0.8894780746195465"
+  },
+  "_npmUser": {
+    "name": "ljharb",
+    "email": "ljharb@gmail.com"
+  },
+  "_npmVersion": "3.9.3",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "es5-shim@4.5.9",
-    "name": "es5-shim",
+    "raw": "es5-shim@^4.5.9",
+    "scope": null,
     "escapedName": "es5-shim",
-    "rawSpec": "4.5.9",
-    "saveSpec": null,
-    "fetchSpec": "4.5.9"
+    "name": "es5-shim",
+    "rawSpec": "^4.5.9",
+    "spec": ">=4.5.9 <5.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/es5-shim/-/es5-shim-4.5.9.tgz",
-  "_spec": "4.5.9",
+  "_shasum": "2a1e2b9e583ff5fed0c20a3ee2cbf3f75230a5c0",
+  "_shrinkwrap": null,
+  "_spec": "es5-shim@^4.5.9",
   "_where": "/home/travis/build/kata-team/kata-team.github.io",
   "bugs": {
     "url": "http://github.com/es-shims/es5-shim/issues"
@@ -62,6 +80,7 @@
       "url": "https://github.com/ljharb/"
     }
   ],
+  "dependencies": {},
   "description": "ECMAScript 5 compatibility shims for legacy JavaScript engines",
   "devDependencies": {
     "@ljharb/eslint-config": "^5.0.0",
@@ -73,9 +92,15 @@
     "semver": "^5.1.0",
     "uglify-js": "^2.6.2"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "2a1e2b9e583ff5fed0c20a3ee2cbf3f75230a5c0",
+    "tarball": "https://registry.npmjs.org/es5-shim/-/es5-shim-4.5.9.tgz"
+  },
   "engines": {
     "node": ">=0.4.0"
   },
+  "gitHead": "30ebdda82ed0d8f42b05785debf1e7ee066c3507",
   "homepage": "http://github.com/es-shims/es5-shim/",
   "keywords": [
     "shim",
@@ -87,7 +112,23 @@
   ],
   "license": "MIT",
   "main": "es5-shim.js",
+  "maintainers": [
+    {
+      "name": "kriskowal",
+      "email": "kris.kowal@cixar.com"
+    },
+    {
+      "name": "gozala",
+      "email": "rfobic@gmail.com"
+    },
+    {
+      "name": "ljharb",
+      "email": "ljharb@gmail.com"
+    }
+  ],
   "name": "es5-shim",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/es-shims/es5-shim.git"
