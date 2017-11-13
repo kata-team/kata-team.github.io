@@ -4,25 +4,23 @@ import SpinnerComponent from './SpinnerComponent';
 import PersonComponent from './PersonComponent';
 import TeamStore from '../stores/TeamStore';
 
-import Person from '../class/Person';
-
 export default class TeamComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { team: TeamStore.items() };
+        this.state = { team: TeamStore.getState() };
     }
 
     componentDidMount() {
-        TeamStore.addLoadListener(this.onLoadHandler.bind(this));
+        this.listener = TeamStore.addListener(this.onLoadHandler.bind(this));
     }
 
     componentWillUnmount() {
-        TeamStore.removeLoadListener(this.onLoadHandler.bind(this));
+        this.listener.remove();
     }
 
     onLoadHandler() {
-        this.setState({ team: TeamStore.items() });
+        this.setState({ team: TeamStore.getState() });
     }
 
     renderItems(items) {

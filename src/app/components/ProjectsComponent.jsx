@@ -8,19 +8,19 @@ export default class ProjectsComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { projects: ProjectsStore.items() };
+        this.state = { projects: ProjectsStore.getState() };
     }
 
     componentDidMount() {
-        ProjectsStore.addLoadListener(this.onLoadHandler.bind(this));
+        this.listener = ProjectsStore.addListener(this.onLoadHandler.bind(this));
     }
 
     componentWillUnmount() {
-        ProjectsStore.removeLoadListener(this.onLoadHandler.bind(this));
+        this.listener.remove();
     }
 
     onLoadHandler() {
-        this.setState({ projects: ProjectsStore.items() });
+        this.setState({ projects: ProjectsStore.getState() });
     }
 
     renderItems(items) {
