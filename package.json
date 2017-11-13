@@ -1,8 +1,9 @@
 {
     "name": "kata-team",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "just another website",
     "main": "app.js",
+    "homepage": "https://kata-team.github.io/",
     "author": "Kata Team",
     "contributors": [
         {
@@ -40,17 +41,18 @@
         "deploy": "grunt test build gh-pages:local"
     },
     "engines": {
-        "node": "6.9.4"
+        "node": "6.x || 7.x || 8.x"
     },
     "dependencies": {
         "es5-shim": "^4.5.9",
-        "flux": "^3.1.0",
+        "flux": "^3.1.3",
         "font-awesome": "^4.7.0",
-        "react": "^15.6.2",
-        "react-dom": "^15.6.2",
+        "lodash": "^4.17.4",
+        "prop-types": "^15.6.0",
+        "react": "^16.1.0",
+        "react-dom": "^16.1.0",
         "rest": "^2.0.0",
-        "uikit": "^3.0.0-beta.30",
-        "underscore": "*"
+        "uikit": "^3.0.0-beta.34"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
@@ -59,7 +61,7 @@
         "babel-preset-es2015": "^6.18.0",
         "babel-preset-react": "^6.16.0",
         "eslint-config-airbnb": "^13.0.0",
-        "eslint-plugin-import": "^2.2.0",
+        "eslint-plugin-import": "^2.8.0",
         "eslint-plugin-jsx-a11y": "^2.2.3",
         "eslint-plugin-react": "^6.6.0",
         "grunt": "^1.0.1",

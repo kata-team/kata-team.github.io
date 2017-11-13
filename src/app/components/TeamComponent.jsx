@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'underscore';
+import _ from 'lodash';
 import SpinnerComponent from './SpinnerComponent';
 import PersonComponent from './PersonComponent';
 import TeamStore from '../stores/TeamStore';

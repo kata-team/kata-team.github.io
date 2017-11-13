@@ -1,4 +1,4 @@
-import _ from 'underscore';
+import _ from 'lodash';
 import rest from 'rest';
 import mime from 'rest/interceptor/mime';
 

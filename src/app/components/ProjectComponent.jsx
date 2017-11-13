@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import _ from 'underscore';
+import PropTypes from 'prop-types';
 import Project from '../class/Project';
 
 export default class ProjectComponent extends Component {
 
     static get propTypes() {
         return {
-            item: React.PropTypes.instanceOf(Project),
+            item: PropTypes.instanceOf(Project),
         };
     }
 
