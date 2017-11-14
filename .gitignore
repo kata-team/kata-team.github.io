@@ -75,14 +75,13 @@ crashlytics-build.properties
 fabric.properties
 
 # node libs
-
-node_modules
+/node_modules
 npm-debug.log
 
 # public folder
-bower_components
-public/javascripts
-public/stylesheets
+/build
+/public/javascripts
+/public/stylesheets
 
 # grunt
 .grunt

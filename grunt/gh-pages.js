@@ -1,12 +1,8 @@
 module.exports = {
     options: {
-        base: 'public',
-        dotfiles: true,
+        base: 'build',
+        dotfiles: false,
         branch: 'master',
-        user: {
-            name: 'Marco Montalbano',
-            email: 'marcomontalbano.work@gmail.com',
-        },
         message: 'Deploy to GitHub Pages.',
     },
     local: {

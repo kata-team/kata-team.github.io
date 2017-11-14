@@ -36,7 +36,7 @@ export default class ProjectComponent extends Component {
                     <p>{this.props.item.description}</p>
                 </div>
                 <div className="kt--project-box kt--project-box__2">
-                    <img className="uk-align-center" src={this.props.item.image} />
+                    <img className="uk-align-center" alt={this.props.item.title} src={this.props.item.image} />
                 </div>
             </div>
         );
