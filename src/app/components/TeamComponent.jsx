@@ -12,14 +12,14 @@ export default class TeamComponent extends Component {
     }
 
     componentDidMount() {
-        this.listener = TeamStore.addListener(this.onLoadHandler.bind(this));
+        this.listener = TeamStore.addListener(this.onTeamStoreHandler.bind(this));
     }
 
     componentWillUnmount() {
         this.listener.remove();
     }
 
-    onLoadHandler() {
+    onTeamStoreHandler() {
         this.setState({ team: TeamStore.getState() });
     }
 

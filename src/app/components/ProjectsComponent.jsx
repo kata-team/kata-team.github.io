@@ -12,14 +12,14 @@ export default class ProjectsComponent extends Component {
     }
 
     componentDidMount() {
-        this.listener = ProjectsStore.addListener(this.onLoadHandler.bind(this));
+        this.listener = ProjectsStore.addListener(this.onProjectsStoreHandler.bind(this));
     }
 
     componentWillUnmount() {
         this.listener.remove();
     }
 
-    onLoadHandler() {
+    onProjectsStoreHandler() {
         this.setState({ projects: ProjectsStore.getState() });
     }
 

@@ -10,29 +10,15 @@ export default class PersonComponent extends Component {
         };
     }
 
-    get linkWebsite() {
-        return this.props.item.linkwebsite ?
-            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkwebsite}>
-                <i className="fa fa-globe fa-lg" aria-hidden="true"></i>
-            </a> : '';
-    }
-
     get personId() {
         let id = `${this.props.item.firstname} ${this.props.item.lastname}`;
         return id.replace(/\s/g, '-').toLowerCase();
     }
 
-    get linkGithub() {
-        return this.props.item.linkgithub ?
-            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linkgithub}>
-                <i className="fa fa-github fa-lg" aria-hidden="true"></i>
-            </a> : '';
-    }
-
-    get linkLinkedin() {
-        return this.props.item.linklinkedin ?
-            <a target="_blank" rel="noopener noreferrer" href={this.props.item.linklinkedin}>
-                <i className="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+    linkTo(link, icon) {
+        return link ?
+            <a target="_blank" rel="noopener noreferrer" href={link}>
+                <i className={`fa ${icon} fa-lg`} aria-hidden="true"></i>
             </a> : '';
     }
 
@@ -45,9 +31,9 @@ export default class PersonComponent extends Component {
                         <div>
                             <h3><span>{this.props.item.firstname}</span> <span>{this.props.item.lastname}</span></h3>
                             <p>
-                                {this.linkWebsite}
-                                {this.linkGithub}
-                                {this.linkLinkedin}
+                                {this.linkTo(this.props.item.linkwebsite, 'fa-globe')}
+                                {this.linkTo(this.props.item.linkgithub, 'fa-github')}
+                                {this.linkTo(this.props.item.linklinkedin, 'fa-linkedin')}
                             </p>
                         </div>
                     </div>

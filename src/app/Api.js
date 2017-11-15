@@ -16,14 +16,14 @@ class Api {
     }
 
     loadTeam() {
-        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/1/public/values?alt=json-in-script&callback={1}`, Person, (items) => {
-            LoaderActions.loadedTeam(items);
+        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/1/public/values?alt=json`, Person, (people) => {
+            LoaderActions.loadedTeam(people);
         });
     }
 
     loadProjects() {
-        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/2/public/values?alt=json-in-script&callback={1}`, Project, (items) => {
-            LoaderActions.loadedProjects(items);
+        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/2/public/values?alt=json`, Project, (projects) => {
+            LoaderActions.loadedProjects(projects);
         });
     }
 }

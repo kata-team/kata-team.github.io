@@ -13,10 +13,10 @@ class ProjectsStore extends ReduceStore {
 
     reduce(state, action) {
         switch (action.type) {
-        case LoaderConstants.LOADED_PROJECTS:
-            return action.value;
-        default:
-            return state;
+            case LoaderConstants.LOADED_PROJECTS:
+                return action.value;
+            default:
+                return state;
         }
     }
 }

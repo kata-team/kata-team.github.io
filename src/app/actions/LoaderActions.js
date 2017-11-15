@@ -6,10 +6,10 @@ export default {
     load() {
         Api.load();
     },
-    loadedTeam(members) {
+    loadedTeam(people) {
         AppDispatcher.dispatch({
             type: LoaderConstants.LOADED_TEAM,
-            value: members,
+            value: people,
         });
     },
     loadedProjects(projects) {
