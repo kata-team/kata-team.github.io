@@ -11,21 +11,16 @@ class Api {
     }
 
     load() {
-        this.loadTeam();
-        this.loadProjects();
+        this.loadFromSpreadsheet(1, Person, LoaderActions.loadedTeam);
+        this.loadFromSpreadsheet(2, Project, LoaderActions.loadedProjects);
     }
 
-    loadTeam() {
-        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/1/public/values?alt=json`, Person, (people) => {
-            LoaderActions.loadedTeam(people);
+    loadFromSpreadsheet(worksheet, Obj, propagateAction) {
+        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/${worksheet}/public/values?alt=json`, Obj, (items) => {
+            propagateAction(items);
         });
     }
 
-    loadProjects() {
-        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/2/public/values?alt=json`, Project, (projects) => {
-            LoaderActions.loadedProjects(projects);
-        });
-    }
 }
 
 export default new Api();
