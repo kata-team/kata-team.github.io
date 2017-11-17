@@ -6,7 +6,7 @@ export default class ProjectComponent extends Component {
 
     static get propTypes() {
         return {
-            item: PropTypes.instanceOf(Project),
+            item: PropTypes.instanceOf(Project).isRequired,
         };
     }
 
@@ -14,7 +14,7 @@ export default class ProjectComponent extends Component {
         return link ?
             <a target="_blank" rel="noopener noreferrer" href={link}>
                 <i className={`fa ${icon}`} aria-hidden="true"></i> <small>{text}</small>
-            </a> : '';
+            </a> : null;
     }
 
     render() {

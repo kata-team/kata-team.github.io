@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import SpinnerComponent from './SpinnerComponent';
 import PersonComponent from './PersonComponent';
-import TeamStore from '../stores/TeamStore';
 
 export default class TeamComponent extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { team: TeamStore.getState() };
+    static get propTypes() {
+        return {
+            team: PropTypes.array,
+        };
     }
 
-    componentDidMount() {
-        this.listener = TeamStore.addListener(this.onTeamStoreHandler.bind(this));
-    }
-
-    componentWillUnmount() {
-        this.listener.remove();
-    }
-
-    onTeamStoreHandler() {
-        this.setState({ team: TeamStore.getState() });
+    static get defaultProps() {
+        return {
+            team: [],
+        };
     }
 
     renderItems(items) {
@@ -35,7 +30,7 @@ export default class TeamComponent extends Component {
                 <section className="uk-section">
                     <div className="uk-container">
                         <div className="uk-child-width-1-3 uk-grid uk-text-center kt--team">
-                            { this.renderItems(this.state.team) }
+                            { this.renderItems(this.props.team) }
                         </div>
                     </div>
                 </section>

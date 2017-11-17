@@ -4,35 +4,25 @@ import mime from 'rest/interceptor/mime';
 
 const client = rest.wrap(mime);
 
-export default class ItemsLoader {
-
-    constructor() {
-        this.items = [];
-    }
+class ItemsLoader {
 
     load(url, Obj, callback, decorator) {
-        if (_.isEmpty(this.items)) {
-            switch (true) {
-                case (url.indexOf('https://spreadsheets.google.com/feeds/list/') === 0):
-                    this.googleSpreadsheets(url, Obj, callback, decorator);
-                    break;
-                default:
-                    this.json(url, Obj, callback, decorator);
-                    break;
-            }
-        } else {
-            callback(this.items);
+        switch (true) {
+            case (url.indexOf('https://spreadsheets.google.com/feeds/list/') === 0):
+                this.googleSpreadsheets(url, Obj, callback, decorator);
+                break;
+            default:
+                this.json(url, Obj, callback, decorator);
+                break;
         }
     }
 
     json(url, Obj, callback, decorator) {
         const decorate = decorator || ((item) => { return item });
         client(url).then((response) => {
-            _.map(response.entity, (elm) => {
-                const item = decorate(elm);
-                this.items.push(new Obj(item));
-            });
-            callback(this.items);
+            callback(_.map(response.entity, (elm) => {
+                return new Obj(decorate(elm));
+            }));
         });
     }
 
@@ -55,12 +45,11 @@ export default class ItemsLoader {
                 return new Obj(item);
             };
 
-            _.map(jsonData.feed.entry, (entry) => {
-                const item = convertEntryToItem(entry);
-                this.items.push(item);
-            });
-
-            callback(this.items);
+            callback(_.map(jsonData.feed.entry, (entry) => {
+                return convertEntryToItem(entry);
+            }));
         });
     }
 }
+
+export default new ItemsLoader();

@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import SpinnerComponent from './SpinnerComponent';
 import ProjectComponent from './ProjectComponent';
-import ProjectsStore from '../stores/ProjectsStore';
 
 export default class ProjectsComponent extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { projects: ProjectsStore.getState() };
+    static get propTypes() {
+        return {
+            projects: PropTypes.array,
+        };
     }
 
-    componentDidMount() {
-        this.listener = ProjectsStore.addListener(this.onProjectsStoreHandler.bind(this));
-    }
-
-    componentWillUnmount() {
-        this.listener.remove();
-    }
-
-    onProjectsStoreHandler() {
-        this.setState({ projects: ProjectsStore.getState() });
+    static get defaultProps() {
+        return {
+            projects: [],
+        };
     }
 
     renderItems(items) {
@@ -34,7 +29,7 @@ export default class ProjectsComponent extends Component {
             <div className="app--projects">
                 <section className="uk-section uk-section-over">
                     <div className="uk-container">
-                        { this.renderItems(this.state.projects) }
+                        { this.renderItems(this.props.projects) }
                     </div>
                 </section>
             </div>

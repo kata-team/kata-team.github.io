@@ -16,7 +16,7 @@ class Api {
     }
 
     loadFromSpreadsheet(worksheet, Obj, propagateAction) {
-        (new ItemsLoader()).load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/${worksheet}/public/values?alt=json`, Obj, (items) => {
+        ItemsLoader.load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/${worksheet}/public/values?alt=json`, Obj, (items) => {
             propagateAction(items);
         });
     }

@@ -6,7 +6,7 @@ export default class PersonComponent extends Component {
 
     static get propTypes() {
         return {
-            item: PropTypes.instanceOf(Person),
+            item: PropTypes.instanceOf(Person).isRequired,
         };
     }
 

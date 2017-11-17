@@ -1,5 +1,5 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
-import LoaderConstants from '../constants/LoaderConstants';
+import ActionTypes from './ActionTypes';
 import Api from '../Api';
 
 export default {
@@ -8,13 +8,13 @@ export default {
     },
     loadedTeam(people) {
         AppDispatcher.dispatch({
-            type: LoaderConstants.LOADED_TEAM,
+            type: ActionTypes.LOADED_TEAM,
             value: people,
         });
     },
     loadedProjects(projects) {
         AppDispatcher.dispatch({
-            type: LoaderConstants.LOADED_PROJECTS,
+            type: ActionTypes.LOADED_PROJECTS,
             value: projects,
         });
     },
