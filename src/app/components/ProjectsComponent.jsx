@@ -26,9 +26,9 @@ export default class ProjectsComponent extends Component {
 
     render() {
         return (
-            <div className="app--projects">
-                <section className="uk-section uk-section-over">
-                    <div className="uk-container">
+            <div className="component--projects">
+                <section className="kt-section kt-section-over">
+                    <div className="kt-container">
                         { this.renderItems(this.props.projects) }
                     </div>
                 </section>

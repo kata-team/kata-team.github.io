@@ -4,9 +4,9 @@ export default class TaglineComponent extends Component {
 
     render() {
         return (
-            <div className="app--tagline">
-                <section className="uk-section">
-                    <div className="uk-container kt--tagline">
+            <div className="component--tagline">
+                <section className="kt-section">
+                    <div className="kt-container kt--tagline">
                         <span>“ just another website ”</span>
                     </div>
                 </section>

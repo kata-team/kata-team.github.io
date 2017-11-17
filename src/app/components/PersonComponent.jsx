@@ -24,18 +24,16 @@ export default class PersonComponent extends Component {
 
     render() {
         return (
-            <div>
-                <div className="kt--person" data-person={this.personId}>
-                    <img src={this.props.item.picture} alt="" className="kt--person__figure" />
-                    <div className="kt--person__figure kt--pattern">
-                        <div>
-                            <h3><span>{this.props.item.firstname}</span> <span>{this.props.item.lastname}</span></h3>
-                            <p>
-                                {this.linkTo(this.props.item.linkwebsite, 'fa-globe')}
-                                {this.linkTo(this.props.item.linkgithub, 'fa-github')}
-                                {this.linkTo(this.props.item.linklinkedin, 'fa-linkedin')}
-                            </p>
-                        </div>
+            <div className="component--person" data-person={this.personId}>
+                <img src={this.props.item.picture} alt="" className="component--person__figure" />
+                <div className="component--person__figure kt--pattern">
+                    <div>
+                        <h3><span>{this.props.item.firstname}</span> <span>{this.props.item.lastname}</span></h3>
+                        <p>
+                            {this.linkTo(this.props.item.linkwebsite, 'fa-globe')}
+                            {this.linkTo(this.props.item.linkgithub, 'fa-github')}
+                            {this.linkTo(this.props.item.linklinkedin, 'fa-linkedin')}
+                        </p>
                     </div>
                 </div>
             </div>

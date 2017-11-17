@@ -1,0 +1,79 @@
+.component--person {
+    position: relative;
+    display: inline-block;
+
+    width: 25%;
+    margin: 0 4%;
+
+    @media (min-width: @breakpoint-small) {
+        width: 15%;
+        margin: 0 9%;
+    }
+
+    @media (max-width: @breakpoint-small-max) {
+        font-size: 10px;
+    }
+
+    .component--person__figure {
+
+        .transition(transform 1s);
+        .transform-style(preserve-3d);
+        .backface-visibility(hidden);
+
+        background-color: white;
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+
+        box-shadow: 0 5px 15px fadeout(black, 80%);
+        border-radius: 20% 40%;
+
+        .transform(rotateY( 0deg ));
+        &:last-child {
+            .transform(rotateY( 180deg ));
+            border-radius: 40% 20%;
+            > div {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            h3 {
+                margin: 0;
+                font-size: 1.3em;
+                padding: 0 .5em;
+                > span {
+                    display: block;
+                    @media (min-width: 1024px) {
+                        display: inline;
+                    }
+                }
+            }
+            p {
+                @media (max-width: @breakpoint-small-max) {
+                    margin: 5px 0 0 0;
+                }
+
+                a {
+                    margin: 0 5px;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    img.component--person__figure {
+        position: relative;
+        .filter( grayscale(100%) );
+    }
+
+    &:hover {
+        .component--person__figure {
+            .transform(rotateY( 180deg ));
+            &:last-child {
+                .transform(rotateY( 0deg ));
+            }
+        }
+    }
+}

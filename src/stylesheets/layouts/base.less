@@ -1,0 +1,144 @@
+body {
+    .kt--pattern();
+    background-color: @global-muted-background;
+    cursor: default;
+    font-weight: 300;
+    font-family: @global-font-family;
+    font-size: @global-font-size;
+    line-height: @global-line-height;
+    margin: 0;
+    color: @global-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    color: @global-emphasis-color;
+    margin: 0 0 20px;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: @global-link-color;
+    &:hover {
+        color: @global-link-hover-color;
+    }
+}
+
+.kt-container {
+    box-sizing: content-box;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 640px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media (min-width: 960px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.kt--pattern {
+    background-image: url("@{image-folder--patterns}/cubes.png");
+}
+
+.kt-section {
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: @breakpoint-medium) {
+            padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    &.kt-section-small {
+        padding: 35px 0;
+    }
+
+    &.kt-section-over {
+        background-color: @background-color;
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        box-shadow: 0 0px 6px 1px @shadow-color;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.kt--logo {
+    &:hover {
+        text-decoration: none;
+    }
+    h1 {
+        display: inline-block;
+        font-size: 45px;
+        vertical-align: middle;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        width: 74px;
+        position: relative;
+        top: -12px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 30px;
+
+    .footer-links {
+        a.links {
+            transition: all .2s;
+            border: 0px solid transparent;
+            padding-bottom: 4px;
+            margin-left: 10px;
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                text-decoration: none;
+                border-bottom: 1px solid @global-link-hover-color;
+                padding-bottom: 2px;
+            }
+        }
+        .badge {
+            font-size: 0;
+            a {
+                display: inline-block;
+                line-height: initial;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    @media (min-width: @breakpoint-small) {
+        text-align: left;
+        .footer-links {
+            text-align: right;
+            .pull-right();
+        }
+    }
+}
+
+#root {
+    min-height: ~"calc(100vh - 146px - 190px)";
+    @media (min-width: @breakpoint-small) {
+        min-height: ~"calc(100vh - 146px - 160px)";
+    }
+}

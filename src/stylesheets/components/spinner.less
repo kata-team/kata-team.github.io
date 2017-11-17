@@ -1,6 +1,74 @@
-.uk-spinner {
-    display: block;
-    margin: 15px 0 !important;
+/*
+ *  Usage:
+ *
+ *    <div class="component--spinner">
+ *        <div class="child component--spinner__1"></div>
+ *        <div class="child component--spinner__2"></div>
+ *    </div>
+ *
+ */
+
+.component--spinner {
+    margin: 40px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
     text-align: center;
-    width: 100%;
+    -webkit-animation: sk-chasingDotsRotate 2s infinite linear;
+    animation: sk-chasingDotsRotate 2s infinite linear;
+
+    .child {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: @global-muted-color;
+        border-radius: 100%;
+        -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
+        animation: sk-chasingDotsBounce 2s infinite ease-in-out;
+    }
+
+    .component--spinner__2 {
+        top: auto;
+        bottom: 0;
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+    }
+}
+
+@-webkit-keyframes sk-chasingDotsRotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-chasingDotsRotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sk-chasingDotsBounce {
+    0%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes sk-chasingDotsBounce {
+    0%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }

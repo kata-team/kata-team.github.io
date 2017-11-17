@@ -26,12 +26,10 @@ export default class TeamComponent extends Component {
 
     render() {
         return (
-            <div className="app--team">
-                <section className="uk-section">
-                    <div className="uk-container">
-                        <div className="uk-child-width-1-3 uk-grid uk-text-center kt--team">
-                            { this.renderItems(this.props.team) }
-                        </div>
+            <div className="component--team">
+                <section className="kt-section">
+                    <div className="kt-container">
+                        { this.renderItems(this.props.team) }
                     </div>
                 </section>
             </div>
