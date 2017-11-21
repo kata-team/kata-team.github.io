@@ -36,7 +36,7 @@
         "build": "npm-run-all build-css build-js",
         "watch": "watch-run -p 'src/stylesheets/**/*.less' npm run build-css",
         "start": "react-scripts start",
-        "gh-pages": "grunt gh-pages:local",
+        "gh-pages": "node ./scripts/gh-pages.js",
         "deploy": "npm-run-all build gh-pages"
     },
     "engines": {
@@ -50,15 +50,12 @@
         "rest": "^2.0.0"
     },
     "devDependencies": {
-        "grunt": "^1.0.1",
-        "grunt-gh-pages": "^2.0.0",
+        "gh-pages": "^1.1.0",
         "less": "^2.7.3",
         "less-plugin-clean-css": "^1.5.1",
-        "load-grunt-config": "^0.19.2",
         "lodash": "^4.17.4",
         "npm-run-all": "^4.1.2",
         "react-scripts": "^1.0.17",
-        "time-grunt": "^1.4.0",
         "watch-run": "^1.2.5"
     }
 }

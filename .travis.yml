@@ -11,6 +11,6 @@ script:
 deploy:
     skip_cleanup: true
     provider: script
-    script: grunt gh-pages:travis
+    script: npm run gh-pages
     on:
         branch: production
