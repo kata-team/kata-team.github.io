@@ -34,8 +34,9 @@
         "build-css": "lessc --source-map --clean-css='--advanced --compatibility=ie8' src/stylesheets/app.less public/stylesheets/app.min.css",
         "build-js": "react-scripts build",
         "build": "npm-run-all build-css build-js",
-        "watch": "watch-run -p 'src/stylesheets/**/*.less' npm run build-css",
-        "start": "react-scripts start",
+        "start-css": "watch-run -p 'src/stylesheets/**/*.less' npm run build-css",
+        "start-js": "react-scripts start",
+        "start": "npm-run-all -p start-css start-js",
         "gh-pages": "node ./scripts/gh-pages.js",
         "deploy": "npm-run-all build gh-pages"
     },
