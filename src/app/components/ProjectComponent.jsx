@@ -25,6 +25,7 @@ export default class ProjectComponent extends Component {
                     <div className="component--project-box-links">
                         {this.linkTo(this.props.item.linkwebsite, 'fa-globe', 'website')}
                         {this.linkTo(this.props.item.linkgithub, 'fa-github', 'github')}
+                        {this.linkTo(this.props.item.linkvideo, 'fa-play-circle-o', 'video')}
                     </div>
                     <p>{this.props.item.description}</p>
                 </div>
