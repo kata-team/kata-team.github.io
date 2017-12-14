@@ -31,6 +31,7 @@
         "flux"
     ],
     "scripts": {
+        "test": "exit 0",
         "build-css": "lessc --source-map --clean-css='--advanced --compatibility=ie8' src/stylesheets/app.less public/stylesheets/app.min.css",
         "build-js": "react-scripts build",
         "build": "npm-run-all build-css build-js",
