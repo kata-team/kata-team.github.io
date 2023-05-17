@@ -42,7 +42,7 @@
     "deploy": "node ./scripts/publish.js master"
   },
   "engines": {
-    "node": "6.x || 7.x || 8.x || 16.x || 18.x"
+    "node": "18.x"
   },
   "dependencies": {
     "flux": "^4.0.4",
