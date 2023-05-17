@@ -1,0 +1,25 @@
+{
+  "request": {
+    "path": "https://docs.google.com/spreadsheets/d/1rzoqR05segkYtSVNfc-F_3TyKW4RfaLXX58Fm-q9DGs/gviz/tq?tqx=out:json&gid=1",
+    "method": "GET",
+    "canceled": false
+  },
+  "url": "https://docs.google.com/spreadsheets/d/1rzoqR05segkYtSVNfc-F_3TyKW4RfaLXX58Fm-q9DGs/gviz/tq?tqx=out:json&gid=1",
+  "raw": {},
+  "status": {
+    "code": 200,
+    "text": "OK"
+  },
+  "headers": {
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Content-Disposition": "attachment; filename=\"json.txt\"; filename*=UTF-8''json.txt",
+    "Content-Encoding": "gzip",
+    "Content-Type": "application/javascript; charset=utf-8",
+    "Date": "Tue, 16 May 2023 16:06:07 GMT",
+    "Expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+    "Pragma": "no-cache",
+    "Server": "GSE",
+    "Transfer-Encoding": "chunked"
+  },
+  "entity": "/*O_o*/\ngoogle.visualization.Query.setResponse({\"version\":\"0.6\",\"reqId\":\"0\",\"status\":\"ok\",\"sig\":\"1452084865\",\"table\":{\"cols\":[{\"id\":\"A\",\"label\":\"\",\"type\":\"string\"},{\"id\":\"B\",\"label\":\"\",\"type\":\"string\"},{\"id\":\"C\",\"label\":\"\",\"type\":\"string\"},{\"id\":\"D\",\"label\":\"\",\"type\":\"string\"},{\"id\":\"E\",\"label\":\"\",\"type\":\"string\"},{\"id\":\"F\",\"label\":\"\",\"type\":\"string\"},{\"id\":\"G\",\"label\":\"\",\"type\":\"string\"}],\"rows\":[{\"c\":[{\"v\":\"firstname\"},{\"v\":\"lastname\"},{\"v\":\"picture\"},{\"v\":\"thumb\"},{\"v\":\"linkWebsite\"},{\"v\":\"linkGithub\"},{\"v\":\"linkLinkedin\"}]},{\"c\":[{\"v\":\"Marco\"},{\"v\":\"Montalbano\"},{\"v\":\"https://avatars2.githubusercontent.com/u/1681269?v=4&s=400\"},null,{\"v\":\"https://marcomontalbano.com\"},{\"v\":\"https://github.com/marcomontalbano\"},{\"v\":\"https://www.linkedin.com/in/marcomontalbano/\"}]},{\"c\":[{\"v\":\"Stefano\"},{\"v\":\"Sala\"},{\"v\":\"https://avatars2.githubusercontent.com/u/1561712?v=4&s=400\"},null,null,{\"v\":\"https://github.com/sSala\"},{\"v\":\"https://www.linkedin.com/in/stefano-sala-6085628/\"}]},{\"c\":[{\"v\":\"Matteo\"},{\"v\":\"Colombo Speroni\"},{\"v\":\"https://avatars2.githubusercontent.com/u/7943167?v=4&s=400\"},null,null,{\"v\":\"https://github.com/mcolombosperoni\"},{\"v\":\"https://www.linkedin.com/in/matteo-colombo-speroni-4a34098b/\"}]}],\"parsedNumHeaders\":0}});"
+}

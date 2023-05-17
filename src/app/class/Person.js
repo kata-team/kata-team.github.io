@@ -1,10 +1,10 @@
 export default class Person {
-    constructor({ firstname = '', lastname = '', picture = '', linkwebsite = '', linkgithub = '', linklinkedin = '' }) {
+    constructor({ firstname = '', lastname = '', picture = '', linkWebsite = '', linkGithub = '', linkLinkedin = '' }) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.picture = picture;
-        this.linkwebsite = linkwebsite;
-        this.linkgithub = linkgithub;
-        this.linklinkedin = linklinkedin;
+        this.linkwebsite = linkWebsite;
+        this.linkgithub = linkGithub;
+        this.linklinkedin = linkLinkedin;
     }
 }

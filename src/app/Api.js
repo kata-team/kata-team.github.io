@@ -11,12 +11,12 @@ class Api {
     }
 
     load() {
-        this.loadFromSpreadsheet(1, Person, LoaderActions.loadedTeam);
-        this.loadFromSpreadsheet(2, Project, LoaderActions.loadedProjects);
+        this.loadFromSpreadsheet(1010211185, Person, LoaderActions.loadedTeam);
+        this.loadFromSpreadsheet(35309925, Project, LoaderActions.loadedProjects);
     }
 
     loadFromSpreadsheet(worksheet, Obj, propagateAction) {
-        ItemsLoader.load(`https://spreadsheets.google.com/feeds/list/${this.spreadsheetId}/${worksheet}/public/values?alt=json`, Obj, (items) => {
+        ItemsLoader.load(`https://docs.google.com/spreadsheets/d/${this.spreadsheetId}/gviz/tq?tqx=out:json&tq&gid=${worksheet}`, Obj, (items) => {
             propagateAction(items);
         });
     }

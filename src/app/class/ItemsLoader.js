@@ -8,7 +8,7 @@ class ItemsLoader {
 
     load(url, Obj, callback, decorator) {
         switch (true) {
-            case (url.indexOf('https://spreadsheets.google.com/feeds/list/') === 0):
+            case (url.indexOf('https://docs.google.com/spreadsheets/') === 0):
                 this.googleSpreadsheets(url, Obj, callback, decorator);
                 break;
             default:
@@ -29,24 +29,23 @@ class ItemsLoader {
     googleSpreadsheets(url, Obj, callback, decorator) {
         const decorate = decorator || ((item) => { return item });
         rest(url).then((response) => {
-            const jsonData = JSON.parse(response.entity);
 
-            const convertEntryToItem = (entry) => {
+            const entityExtracted = response.entity.substring(47).slice(0, -2);
+            const jsonData = JSON.parse(entityExtracted);
+
+            const convertEntryToItem = (entry, columnsKeys) => {
                 let item = {};
-                const rx = /^gsx\$(.*)$/;
-                _.map(entry, (value, key) => {
-                    if (rx.test(key)) {
-                        item[rx.exec(key)[1]] = value.$t;
-                    }
+                _.map(entry.c, (value, key) => {
+                    item[columnsKeys[key]['v']] = value != null ? value['v'] : null;
                 });
 
                 item = decorate(item);
-
                 return new Obj(item);
             };
 
-            callback(_.map(jsonData.feed.entry, (entry) => {
-                return convertEntryToItem(entry);
+            callback(_.map(jsonData.table.rows.slice(1), (entry) => {
+                const columnsKeys = jsonData.table.rows[0].c
+                return convertEntryToItem(entry, columnsKeys);
             }));
         });
     }
